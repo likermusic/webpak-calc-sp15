@@ -1,11 +1,11 @@
 export function print(data) {
-  console.log(data);
+  // console.log(data);
   //...
 }
 
-function getData() {
-  //...
-}
+// function getData() {
+//   //...
+// }
 
 export function setAlert(data) {
   alert(data);

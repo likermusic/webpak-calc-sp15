@@ -1,9 +1,9 @@
 import "./style.css";
 // ─── ПЕРЕМЕННЫЕ
-let current = "0"; // число на экране прямо сейчас
-let previous = null; // число до того, как нажали операцию
-let operation = null; // выбранная операция
-let shouldReset = false; // true = следующая цифра начнёт новое число // false = цифра должна дописаться к текущему числу
+let current = "0";
+let previous = null;
+let operation = null;
+let shouldReset = false;
 
 // ─── ЭКРАН
 const display = document.getElementById("display");
@@ -70,7 +70,7 @@ function pressClear() {
 
 // +/- — меняем знак числа
 function pressSign() {
-  current = String(-parseFloat(current)); // parseFloat(current) - возвращает число, -  знак, меняет число (было -25, будет -(-25), значит +25) и обратно в строку
+  current = String(-parseFloat(current));
   updateDisplay();
 }
 
@@ -82,9 +82,9 @@ function pressPercent() {
 
 // Пользователь нажал одну из операций (+, -, ×, ÷)
 function pressOperation(op) {
-  previous = parseFloat(current); // число на экране
-  operation = op; // (+, -, ×, ÷)
-  shouldReset = true; // после операции вводим новое число
+  previous = parseFloat(current);
+  operation = op;
+  shouldReset = true;
 }
 
 // Результат
@@ -95,7 +95,7 @@ function pressEquals() {
   // выражение:
   const a = previous;
   const b = parseFloat(current);
-  let result; // здесь пока нет значения, потому что нет никаких расчетов
+  let result;
   // console.log(result);
 
   if (operation === "+") result = a + b;
